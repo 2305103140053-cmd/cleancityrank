@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Dashboard | CleanCity Rank</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dash-body">
+
+<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <i class="fas fa-leaf"></i>
+      <span>CleanCity<span class="accent">Rank</span></span>
+    </a>
+    <div class="nav-menu" id="navMenu">
+      <a href="index.html"          class="nav-link">Home</a>
+      <a href="index.html#about"    class="nav-link">About</a>
+      <a href="index.html#modules"  class="nav-link">Modules</a>
+      <a href="index.html#team"     class="nav-link">Team</a>
+      <a href="dashboard.html"      class="nav-cta active-nav-cta">
+        <i class="fas fa-chart-bar"></i> Dashboard
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ DASHBOARD LAYOUT ════════════════════════════════════ -->
+<div class="dash-layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sb-header">
+      <i class="fas fa-chart-line"></i>
+      <span>Analytics</span>
+    </div>
+    <nav class="sb-nav">
+      <a href="#" class="sb-link active" data-s="overview">
+        <i class="fas fa-th-large"></i> Overview
+      </a>
+      <a href="#" class="sb-link" data-s="rankings">
+        <i class="fas fa-list-ol"></i> Rankings
+      </a>
+      <a href="#" class="sb-link" data-s="parameters">
+        <i class="fas fa-sliders-h"></i> Parameters
+      </a>
+      <a href="#" class="sb-link" data-s="trends">
+        <i class="fas fa-chart-line"></i> Trends
+      </a>
+      <a href="#" class="sb-link" data-s="comparison">
+        <i class="fas fa-balance-scale"></i> Comparison
+      </a>
+    </nav>
+    <div class="sb-footer">
+      <div class="sb-footer-info">
+        <i class="fas fa-sync-alt"></i>
+        <span>Updated: Oct 2025</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dash-main">
+
+    <!-- Header -->
+    <div class="dash-header">
+      <div>
+        <h1><i class="fas fa-city" style="color:var(--green);margin-right:10px"></i>Cleanliness Ranking Dashboard</h1>
+        <p>Real-time city cleanliness analytics &nbsp;·&nbsp; Swachh Bharat Mission 2025-26 &nbsp;·&nbsp; Parul University</p>
+      </div>
+      <div class="dash-actions">
+        <div class="filter-row">
+          <select class="dash-sel" id="yearSel">
+            <option>2025-26</option>
+            <option>2024-25</option>
+            <option>2023-24</option>
+          </select>
+          <select class="dash-sel" id="stateSel">
+            <option>All States</option>
+            <option>Maharashtra</option>
+            <option>Gujarat</option>
+            <option>Karnataka</option>
+            <option>Madhya Pradesh</option>
+            <option>Rajasthan</option>
+          </select>
+        </div>
+        <a href="index.html" class="btn-home">
+          <i class="fas fa-home"></i> Home
+        </a>
+      </div>
+    </div>
+
+    <!-- ── Stat Cards ─────────────────────────────────────── -->
+    <div class="stats-row">
+      <div class="stat-card sc-green">
+        <div class="sc-icon"><i class="fas fa-city"></i></div>
+        <div class="sc-info">
+          <span class="sc-val">500+</span>
+          <span class="sc-lbl">Cities Monitored</span>
+          <span class="sc-chg up"><i class="fas fa-arrow-up"></i> 12% from last year</span>
+        </div>
+      </div>
+      <div class="stat-card sc-blue">
+        <div class="sc-icon"><i class="fas fa-trophy"></i></div>
+        <div class="sc-info">
+          <span class="sc-val">Indore</span>
+          <span class="sc-lbl">Top Ranked City</span>
+          <span class="sc-chg up"><i class="fas fa-star"></i> Score: 94.2 / 100</span>
+        </div>
+      </div>
+      <div class="stat-card sc-orange">
+        <div class="sc-icon"><i class="fas fa-chart-bar"></i></div>
+        <div class="sc-info">
+          <span class="sc-val">76.4</span>
+          <span class="sc-lbl">National Avg Score</span>
+          <span class="sc-chg up"><i class="fas fa-arrow-up"></i> +4.2 pts this year</span>
+        </div>
+      </div>
+      <div class="stat-card sc-purple">
+        <div class="sc-icon"><i class="fas fa-sliders-h"></i></div>
+        <div class="sc-info">
+          <span class="sc-val">5</span>
+          <span class="sc-lbl">Evaluation Parameters</span>
+          <span class="sc-chg neu"><i class="fas fa-minus"></i> Weighted scoring</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Charts Row 1 ───────────────────────────────────── -->
+    <div class="charts-row">
+      <!-- Rankings bar -->
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <h3>City Cleanliness Rankings</h3>
+            <p>Top 10 cities by overall cleanliness score (out of 100)</p>
+          </div>
+          <div class="chart-btns">
+            <button class="chart-btn active">Bar</button>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height:290px">
+          <canvas id="rankingChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Param weights pie -->
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <h3>Parameter Weights</h3>
+            <p>Scoring distribution across 5 metrics</p>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height:290px">
+          <canvas id="paramPieChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Charts Row 2 ───────────────────────────────────── -->
+    <div class="charts-row">
+      <!-- Trend line -->
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <h3>Score Trend (2021 – 2025)</h3>
+            <p>National average vs top city score over years</p>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height:260px">
+          <canvas id="trendChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Radar -->
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <h3>Top 3 City Comparison</h3>
+            <p>Parameter-wise radar analysis</p>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height:260px">
+          <canvas id="radarChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Detailed Rankings Table ────────────────────────── -->
+    <div class="table-card">
+      <div class="table-head-bar">
+        <div>
+          <h3>Detailed City Rankings</h3>
+          <p>All 15 cities with parameter-wise scores and grades</p>
+        </div>
+        <div class="tbl-controls">
+          <div class="search-wrap">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchCity" placeholder="Search city or state…">
+          </div>
+          <button class="btn-export" onclick="alert('Export feature — connect to backend for live data export.')">
+            <i class="fas fa-download"></i> Export
+          </button>
+        </div>
+      </div>
+      <div class="tbl-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Waste Mgmt</th>
+              <th>Sanitation</th>
+              <th>Hygiene</th>
+              <th>Water Quality</th>
+              <th>Air Quality</th>
+              <th>Total Score</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- populated by charts.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Parameters Info Strip -->
+    <div style="
+      background:#1c2128; border-radius:16px; padding:22px 28px;
+      border:1px solid rgba(255,255,255,.05); margin-bottom:24px;
+      display:flex; flex-wrap:wrap; gap:20px; align-items:center;
+    ">
+      <div style="color:rgba(255,255,255,.5);font-size:13px;font-weight:600;">
+        <i class="fas fa-info-circle" style="color:var(--green);margin-right:6px"></i>
+        Scoring Parameters:
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;flex:1">
+        <span style="background:rgba(46,204,113,.1);color:#2ecc71;border:1px solid rgba(46,204,113,.2);padding:5px 14px;border-radius:50px;font-size:12px;font-weight:600">♻ Waste Management – 30%</span>
+        <span style="background:rgba(52,152,219,.1);color:#3498db;border:1px solid rgba(52,152,219,.2);padding:5px 14px;border-radius:50px;font-size:12px;font-weight:600">🚽 Sanitation Infra – 25%</span>
+        <span style="background:rgba(243,156,18,.1);color:#f39c12;border:1px solid rgba(243,156,18,.2);padding:5px 14px;border-radius:50px;font-size:12px;font-weight:600">🧼 Public Hygiene – 20%</span>
+        <span style="background:rgba(155,89,182,.1);color:#9b59b6;border:1px solid rgba(155,89,182,.2);padding:5px 14px;border-radius:50px;font-size:12px;font-weight:600">💧 Water Quality – 15%</span>
+        <span style="background:rgba(231,76,60,.1);color:#e74c3c;border:1px solid rgba(231,76,60,.2);padding:5px 14px;border-radius:50px;font-size:12px;font-weight:600">🌬 Air Quality – 10%</span>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

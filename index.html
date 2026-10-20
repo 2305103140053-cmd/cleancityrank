@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cleanliness Ranking Dashboard for Cities - A data-driven platform for evaluating city cleanliness under Swachh Bharat Mission">
+    <title>CleanCity Rank | Cleanliness Ranking Dashboard for Cities</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     PRELOADER
+════════════════════════════════════════════════════════ -->
+<div id="preloader">
+    <div class="loader-wrapper">
+        <div class="loader-ring"></div>
+        <div class="loader-icon"><i class="fas fa-city"></i></div>
+        <p>Loading CleanCity Rank&hellip;</p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <i class="fas fa-leaf"></i>
+            <span>CleanCity<span class="accent">Rank</span></span>
+        </a>
+        <div class="nav-menu" id="navMenu">
+            <a href="#home"       class="nav-link active">Home</a>
+            <a href="#about"      class="nav-link">About</a>
+            <a href="#comparison" class="nav-link">Comparison</a>
+            <a href="#modules"    class="nav-link">Modules</a>
+            <a href="#features"   class="nav-link">Features</a>
+            <a href="#team"       class="nav-link">Team</a>
+            <a href="dashboard.html" class="nav-cta">
+                <i class="fas fa-chart-bar"></i> Live Dashboard
+            </a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<section id="home" class="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-glow"></div>
+    <div class="container hero-container">
+        <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+            <i class="fas fa-award"></i>
+            Swachh Bharat Initiative &nbsp;·&nbsp; Parul University 2025‑26
+        </div>
+        <h1 data-aos="fade-up" data-aos-delay="200">
+            Cleanliness Ranking<br>
+            <span class="text-gradient">Dashboard for Cities</span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="300">
+            A centralized, data‑driven platform that evaluates and ranks cities based on
+            cleanliness and sanitation parameters — empowering smarter urban governance
+            and sustainable city development.
+        </p>
+        <div class="hero-btns" data-aos="fade-up" data-aos-delay="400">
+            <a href="dashboard.html" class="btn btn-primary">
+                <i class="fas fa-chart-line"></i> Explore Dashboard
+            </a>
+            <a href="#about" class="btn btn-ghost">
+                <i class="fas fa-info-circle"></i> Learn More
+            </a>
+        </div>
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+            <div class="hero-stat">
+                <span class="count" data-target="500">0</span><span class="plus">+</span>
+                <label>Cities Ranked</label>
+            </div>
+            <div class="stat-div"></div>
+            <div class="hero-stat">
+                <span class="count" data-target="5">0</span>
+                <label>Parameters</label>
+            </div>
+            <div class="stat-div"></div>
+            <div class="hero-stat">
+                <span class="count" data-target="5">0</span>
+                <label>Core Modules</label>
+            </div>
+            <div class="stat-div"></div>
+            <div class="hero-stat">
+                <span class="count" data-target="3">0</span>
+                <label>User Roles</label>
+            </div>
+        </div>
+    </div>
+    <a href="#about" class="scroll-cue">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════════ -->
+<section id="about" class="section about-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="tag">About the Project</span>
+            <h2>What is <span class="hl">CleanCity Rank?</span></h2>
+            <p>A smart platform bridging the gap between raw sanitation data and actionable urban insights</p>
+        </div>
+
+        <div class="about-grid">
+            <!-- Left blocks -->
+            <div class="about-blocks" data-aos="fade-right" data-aos-delay="100">
+                <div class="ablock red">
+                    <div class="ablock-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div>
+                        <h3>The Problem</h3>
+                        <p>Cleanliness data is scattered across multiple departments, making it difficult to analyze and compare city performance. Manual analysis is slow, error‑prone, and static reports lack actionable insights.</p>
+                    </div>
+                </div>
+                <div class="ablock green">
+                    <div class="ablock-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div>
+                        <h3>Our Solution</h3>
+                        <p>The Cleanliness Ranking Dashboard aggregates, analyzes, and presents cleanliness data in interactive dashboards with rankings, trends, and visual insights — enabling continuous, data‑driven governance.</p>
+                    </div>
+                </div>
+                <div class="ablock blue">
+                    <div class="ablock-icon"><i class="fas fa-bullseye"></i></div>
+                    <div>
+                        <h3>Our Goal</h3>
+                        <p>Support smarter urban governance and sustainable city development aligned with the Swachh Bharat Mission by making cleanliness data transparent and actionable.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right visual -->
+            <div class="about-visual" data-aos="fade-left" data-aos-delay="200">
+                <div class="rank-preview-card">
+                    <div class="rpc-header">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Top Ranked Cities</span>
+                        <span class="live-badge">&#9679; Live</span>
+                    </div>
+                    <div class="city-list">
+                        <div class="city-row">
+                            <span class="rk">🥇</span>
+                            <div class="ci"><strong>Indore</strong>
+                                <div class="bar"><div class="bfill" style="width:94%"></div></div>
+                            </div><span class="sc">94.2</span>
+                        </div>
+                        <div class="city-row">
+                            <span class="rk">🥈</span>
+                            <div class="ci"><strong>Surat</strong>
+                                <div class="bar"><div class="bfill" style="width:89%"></div></div>
+                            </div><span class="sc">89.7</span>
+                        </div>
+                        <div class="city-row">
+                            <span class="rk">🥉</span>
+                            <div class="ci"><strong>Navi Mumbai</strong>
+                                <div class="bar"><div class="bfill" style="width:87%"></div></div>
+                            </div><span class="sc">87.5</span>
+                        </div>
+                        <div class="city-row">
+                            <span class="rk num">4</span>
+                            <div class="ci"><strong>Mysuru</strong>
+                                <div class="bar"><div class="bfill" style="width:85%"></div></div>
+                            </div><span class="sc">85.3</span>
+                        </div>
+                        <div class="city-row">
+                            <span class="rk num">5</span>
+                            <div class="ci"><strong>Pune</strong>
+                                <div class="bar"><div class="bfill" style="width:81%"></div></div>
+                            </div><span class="sc">80.9</span>
+                        </div>
+                    </div>
+                    <a href="dashboard.html" class="view-all">View Full Rankings →</a>
+                </div>
+                <!-- Mini param cards -->
+                <div class="mini-params">
+                    <div class="mp"><i class="fas fa-recycle" style="color:#2ecc71"></i><span>Waste Mgmt</span><strong>30%</strong></div>
+                    <div class="mp"><i class="fas fa-toilet"  style="color:#3498db"></i><span>Sanitation</span><strong>25%</strong></div>
+                    <div class="mp"><i class="fas fa-hand-sparkles" style="color:#f39c12"></i><span>Hygiene</span><strong>20%</strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     COMPARISON
+════════════════════════════════════════════════════════ -->
+<section id="comparison" class="section dark-section">
+    <div class="container">
+        <div class="section-header light" data-aos="fade-up">
+            <span class="tag">Old vs New</span>
+            <h2>Existing System vs <span class="hl">Our System</span></h2>
+            <p>See how our platform transforms traditional cleanliness monitoring</p>
+        </div>
+        <div class="cmp-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="cmp-col existing">
+                <div class="cmp-head">
+                    <i class="fas fa-times-circle"></i>
+                    <h3>Existing System</h3>
+                </div>
+                <ul>
+                    <li><i class="fas fa-minus"></i> Manual surveys and paper reports</li>
+                    <li><i class="fas fa-minus"></i> Delayed analysis and updates</li>
+                    <li><i class="fas fa-minus"></i> Limited public transparency</li>
+                    <li><i class="fas fa-minus"></i> Difficult city comparison</li>
+                    <li><i class="fas fa-minus"></i> Static, non‑interactive reports</li>
+                    <li><i class="fas fa-minus"></i> Data scattered across departments</li>
+                    <li><i class="fas fa-minus"></i> No centralized monitoring</li>
+                </ul>
+            </div>
+            <div class="cmp-arrow">
+                <div class="arrow-circle"><i class="fas fa-arrow-right"></i></div>
+                <span>Upgrade</span>
+            </div>
+            <div class="cmp-col proposed">
+                <div class="cmp-head">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Proposed System</h3>
+                </div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Automated, data‑driven dashboard</li>
+                    <li><i class="fas fa-check"></i> Real‑time or periodic updates</li>
+                    <li><i class="fas fa-check"></i> Publicly accessible rankings</li>
+                    <li><i class="fas fa-check"></i> Easy city‑wise comparison</li>
+                    <li><i class="fas fa-check"></i> Interactive visual dashboards</li>
+                    <li><i class="fas fa-check"></i> Centralized data aggregation</li>
+                    <li><i class="fas fa-check"></i> Continuous performance monitoring</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     MODULES
+════════════════════════════════════════════════════════ -->
+<section id="modules" class="section modules-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="tag">Architecture</span>
+            <h2>System <span class="hl">Modules</span></h2>
+            <p>Five integrated modules delivering seamless cleanliness data management and visualization</p>
+        </div>
+        <div class="modules-grid">
+
+            <div class="mod-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="mod-top">
+                    <div class="mod-icon" style="background:linear-gradient(135deg,#2ecc71,#27ae60)"><i class="fas fa-database"></i></div>
+                    <span class="mod-num">01</span>
+                </div>
+                <h3>Data Collection Module</h3>
+                <p>Collects cleanliness‑related data from government portals, surveys, citizen feedback systems, and public APIs in a structured manner.</p>
+                <div class="pills"><span>APIs</span><span>Surveys</span><span>Open Data</span></div>
+            </div>
+
+            <div class="mod-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="mod-top">
+                    <div class="mod-icon" style="background:linear-gradient(135deg,#3498db,#2980b9)"><i class="fas fa-cogs"></i></div>
+                    <span class="mod-num">02</span>
+                </div>
+                <h3>Data Processing Module</h3>
+                <p>Cleans, normalizes, and prepares collected data — removing duplicates and handling missing values for fair, accurate analysis.</p>
+                <div class="pills"><span>ETL</span><span>Validation</span><span>Normalization</span></div>
+            </div>
+
+            <div class="mod-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="mod-top">
+                    <div class="mod-icon" style="background:linear-gradient(135deg,#f39c12,#d35400)"><i class="fas fa-trophy"></i></div>
+                    <span class="mod-num">03</span>
+                </div>
+                <h3>Ranking &amp; Scoring Module</h3>
+                <p>Calculates city scores using predefined weighted cleanliness parameters and generates objective comparative rankings.</p>
+                <div class="pills"><span>Scoring</span><span>Weighted Avg</span><span>Ranking</span></div>
+            </div>
+
+            <div class="mod-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="mod-top">
+                    <div class="mod-icon" style="background:linear-gradient(135deg,#9b59b6,#8e44ad)"><i class="fas fa-chart-pie"></i></div>
+                    <span class="mod-num">04</span>
+                </div>
+                <h3>Dashboard Visualization Module</h3>
+                <p>Displays rankings, graphs, and comparative charts in an interactive, user‑friendly format for citizens and officials alike.</p>
+                <div class="pills"><span>Chart.js</span><span>Interactive</span><span>Real‑time</span></div>
+            </div>
+
+            <div class="mod-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="mod-top">
+                    <div class="mod-icon" style="background:linear-gradient(135deg,#e74c3c,#c0392b)"><i class="fas fa-shield-alt"></i></div>
+                    <span class="mod-num">05</span>
+                </div>
+                <h3>Admin Module</h3>
+                <p>Manages datasets, ranking criteria, user access, and overall system configuration, security, and integrity.</p>
+                <div class="pills"><span>Admin Panel</span><span>Security</span><span>Config</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FEATURES
+════════════════════════════════════════════════════════ -->
+<section id="features" class="section dark-section">
+    <div class="container">
+        <div class="section-header light" data-aos="fade-up">
+            <span class="tag">Capabilities</span>
+            <h2>Key <span class="hl">Features</span></h2>
+            <p>Everything needed for comprehensive city cleanliness monitoring</p>
+        </div>
+        <div class="features-grid">
+            <div class="feat-card" data-aos="zoom-in" data-aos-delay="0">
+                <i class="fas fa-medal"></i>
+                <h3>City‑wise Ranking</h3>
+                <p>Ranks cities based on sanitation and hygiene performance using a transparent weighted scoring system.</p>
+            </div>
+            <div class="feat-card" data-aos="zoom-in" data-aos-delay="80">
+                <i class="fas fa-chart-area"></i>
+                <h3>Interactive Dashboard</h3>
+                <p>Dynamic charts, graphs, and tables with drill‑down capabilities for deep analysis.</p>
+            </div>
+            <div class="feat-card" data-aos="zoom-in" data-aos-delay="160">
+                <i class="fas fa-sliders-h"></i>
+                <h3>Parameter Analysis</h3>
+                <p>Deep analysis across waste management, public toilets, cleanliness drives, and more.</p>
+            </div>
+            <div class="feat-card" data-aos="zoom-in" data-aos-delay="240">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Comparative Insights</h3>
+                <p>Side‑by‑side comparison between cities and regions for competitive benchmarking.</p>
+            </div>
+            <div class="feat-card" data-aos="zoom-in" data-aos-delay="320">
+                <i class="fas fa-eye"></i>
+                <h3>Data Transparency</h3>
+                <p>Promotes public accountability by making cleanliness data openly accessible to all.</p>
+            </div>
+            <div class="feat-card" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fas fa-sync-alt"></i>
+                <h3>Real‑time Updates</h3>
+                <p>Periodic data refresh ensuring up‑to‑date cleanliness rankings and performance metrics.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     USER ROLES
+════════════════════════════════════════════════════════ -->
+<section id="roles" class="section roles-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="tag">System Users</span>
+            <h2>Who Uses <span class="hl">CleanCity Rank?</span></h2>
+            <p>Three distinct user roles with tailored access and capabilities</p>
+        </div>
+        <div class="roles-grid">
+            <div class="role-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="role-top" style="background:linear-gradient(135deg,#2ecc71,#27ae60)">
+                    <i class="fas fa-users"></i>
+                    <h3>Public Users</h3>
+                </div>
+                <div class="role-body">
+                    <p>Citizens, researchers, students, and media who access the dashboard for public information and awareness.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i>View city cleanliness rankings</li>
+                        <li><i class="fas fa-check"></i>Compare city performance</li>
+                        <li><i class="fas fa-check"></i>Access visual reports &amp; trends</li>
+                        <li><i class="fas fa-check"></i>Download public data</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="role-card featured-role" data-aos="fade-up" data-aos-delay="150">
+                <div class="role-ribbon">Primary</div>
+                <div class="role-top" style="background:linear-gradient(135deg,#3498db,#2980b9)">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Government Officials</h3>
+                </div>
+                <div class="role-body">
+                    <p>Municipal authorities, urban planners, and sanitation departments for data‑driven governance and policy.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i>Analyze detailed performance data</li>
+                        <li><i class="fas fa-check"></i>Identify problem areas</li>
+                        <li><i class="fas fa-check"></i>Plan cleanliness initiatives</li>
+                        <li><i class="fas fa-check"></i>Allocate resources efficiently</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="role-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="role-top" style="background:linear-gradient(135deg,#e74c3c,#c0392b)">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Administrator</h3>
+                </div>
+                <div class="role-body">
+                    <p>System admin responsible for data integrity, configuration, and overall platform management.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i>Manage data sources</li>
+                        <li><i class="fas fa-check"></i>Update rankings &amp; criteria</li>
+                        <li><i class="fas fa-check"></i>Maintain system integrity</li>
+                        <li><i class="fas fa-check"></i>Control user access</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     TECHNOLOGY
+════════════════════════════════════════════════════════ -->
+<section id="tech" class="section tech-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="tag">Tech Stack</span>
+            <h2>Built with <span class="hl">Modern Technologies</span></h2>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-col" data-aos="fade-up" data-aos-delay="0">
+                <div class="tech-label"><i class="fas fa-desktop"></i> Frontend</div>
+                <div class="tech-pills-wrap">
+                    <div class="tp"><i class="fab fa-html5" style="color:#e34c26"></i>HTML5</div>
+                    <div class="tp"><i class="fab fa-css3-alt" style="color:#264de4"></i>CSS3</div>
+                    <div class="tp"><i class="fab fa-js" style="color:#f7df1e"></i>JavaScript</div>
+                    <div class="tp"><i class="fas fa-chart-bar" style="color:#ff6384"></i>Chart.js</div>
+                    <div class="tp"><i class="fas fa-chart-pie" style="color:#f2a33a"></i>Power BI</div>
+                </div>
+            </div>
+            <div class="tech-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="tech-label"><i class="fas fa-server"></i> Backend</div>
+                <div class="tech-pills-wrap">
+                    <div class="tp"><i class="fab fa-python" style="color:#3776ab"></i>Python</div>
+                    <div class="tp"><i class="fab fa-node-js" style="color:#68a063"></i>Node.js</div>
+                    <div class="tp"><i class="fas fa-code" style="color:#888"></i>Flask / Django</div>
+                </div>
+            </div>
+            <div class="tech-col" data-aos="fade-up" data-aos-delay="200">
+                <div class="tech-label"><i class="fas fa-database"></i> Database</div>
+                <div class="tech-pills-wrap">
+                    <div class="tp"><i class="fas fa-database" style="color:#00758f"></i>MySQL</div>
+                    <div class="tp"><i class="fas fa-database" style="color:#336791"></i>PostgreSQL</div>
+                </div>
+            </div>
+            <div class="tech-col" data-aos="fade-up" data-aos-delay="300">
+                <div class="tech-label"><i class="fas fa-cloud"></i> Cloud &amp; DevOps</div>
+                <div class="tech-pills-wrap">
+                    <div class="tp"><i class="fab fa-microsoft" style="color:#0089d6"></i>Azure</div>
+                    <div class="tp"><i class="fab fa-aws" style="color:#ff9900"></i>AWS</div>
+                    <div class="tp"><i class="fab fa-github" style="color:#aaa"></i>GitHub</div>
+                    <div class="tp"><i class="fab fa-git-alt" style="color:#f05032"></i>Git</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Requirements -->
+        <div class="req-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="req-card">
+                <div class="req-icon"><i class="fas fa-microchip"></i></div>
+                <h3>Hardware Requirements</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>Laptop or Desktop Computer</li>
+                    <li><i class="fas fa-check"></i>Minimum 8 GB RAM</li>
+                    <li><i class="fas fa-check"></i>Intel i5 / AMD Ryzen 5 or equivalent</li>
+                    <li><i class="fas fa-check"></i>256 GB HDD / SSD Storage</li>
+                    <li><i class="fas fa-check"></i>Stable Internet Connectivity</li>
+                </ul>
+            </div>
+            <div class="req-card">
+                <div class="req-icon"><i class="fas fa-code"></i></div>
+                <h3>Software Requirements</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>Modern Web Browser (Chrome / Firefox)</li>
+                    <li><i class="fas fa-check"></i>Python 3.x / Node.js Runtime</li>
+                    <li><i class="fas fa-check"></i>MySQL / PostgreSQL Database</li>
+                    <li><i class="fas fa-check"></i>Git Version Control</li>
+                    <li><i class="fas fa-check"></i>VS Code / Any IDE</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     TEAM
+════════════════════════════════════════════════════════ -->
+<section id="team" class="section dark-section team-section">
+    <div class="container">
+        <div class="section-header light" data-aos="fade-up">
+            <span class="tag">The Builders</span>
+            <h2>Meet Our <span class="hl">Team</span></h2>
+            <p>Semester VII &nbsp;·&nbsp; BCA / BSCIT / IMCA &nbsp;·&nbsp; Parul University &nbsp;·&nbsp; A.Y. 2025‑26</p>
+        </div>
+
+        <!-- 3 members -->
+        <div class="team-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-card">
+                <div class="av-circle" style="background:linear-gradient(135deg,#3498db,#2980b9)">RS</div>
+                <h3>Rapeti Shyamala Rao</h3>
+                <p class="role-text">UI/UX &amp; Data Analyst</p>
+                <span class="enroll">2305103140053</span>
+            </div>
+            <div class="team-card featured-card">
+                <div class="av-circle" style="background:linear-gradient(135deg,#9b59b6,#8e44ad)">BK</div>
+                <h3>Blesson Kakkassery</h3>
+                <p class="role-text">Data &amp; Backend Engineer</p>
+                <span class="enroll">2305103140037</span>
+            </div>
+            <div class="team-card">
+                <div class="av-circle" style="background:linear-gradient(135deg,#e74c3c,#c0392b)">RC</div>
+                <h3>Rohit Choudhari</h3>
+                <p class="role-text">Frontend Developer</p>
+                <span class="enroll">2305103140008</span>
+            </div>
+        </div>
+
+        <!-- Guide card -->
+        <div class="guide-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="guide-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="guide-info">
+                <span class="guide-label">Project Guide</span>
+                <h3>Prof. Sonali Gupta</h3>
+                <p>Parul Institute of Computer Applications &nbsp;·&nbsp; Faculty of IT &amp; Computer Science</p>
+                <p>Parul University, Vadodara, Gujarat</p>
+            </div>
+            <div class="guide-officials">
+                <div class="official">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div><strong>HOD</strong><p>Dr. Abhishek Mehta</p></div>
+                </div>
+                <div class="official">
+                    <i class="fas fa-user-tie"></i>
+                    <div><strong>Principal</strong><p>Dr. Priya Swaminarayan</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FUTURE & LIMITATIONS
+════════════════════════════════════════════════════════ -->
+<section id="future" class="section future-section">
+    <div class="container">
+        <div class="fl-grid">
+            <!-- Future -->
+            <div data-aos="fade-right">
+                <span class="tag">Roadmap</span>
+                <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:28px">
+                    Future <span class="hl">Enhancements</span>
+                </h2>
+                <div class="future-items">
+                    <div class="fi"><div class="fi-icon"><i class="fas fa-wifi"></i></div><div><h4>IoT Integration</h4><p>Real‑time waste and cleanliness monitoring via IoT sensors in smart bins and streets.</p></div></div>
+                    <div class="fi"><div class="fi-icon"><i class="fas fa-robot"></i></div><div><h4>AI / ML Predictions</h4><p>Predictive cleanliness analysis using machine learning models for proactive governance.</p></div></div>
+                    <div class="fi"><div class="fi-icon"><i class="fas fa-mobile-alt"></i></div><div><h4>Citizen Mobile App</h4><p>Live feedback and reporting through a dedicated citizen mobile application.</p></div></div>
+                    <div class="fi"><div class="fi-icon"><i class="fas fa-map"></i></div><div><h4>GIS Mapping</h4><p>Location‑wise cleanliness visualization on interactive geo‑maps.</p></div></div>
+                    <div class="fi"><div class="fi-icon"><i class="fas fa-file-alt"></i></div><div><h4>Auto Report Generation</h4><p>Automated PDF / Excel reports for government agencies on demand.</p></div></div>
+                </div>
+            </div>
+
+            <!-- Limitations -->
+            <div data-aos="fade-left">
+                <span class="tag">Constraints</span>
+                <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:28px">
+                    Known <span class="hl">Limitations</span>
+                </h2>
+                <div class="limit-items">
+                    <div class="li-card"><i class="fas fa-database"></i><p>Depends on availability and accuracy of external data sources</p></div>
+                    <div class="li-card"><i class="fas fa-clock"></i><p>Real‑time data collection may be technically challenging</p></div>
+                    <div class="li-card"><i class="fas fa-poll"></i><p>Subjective survey data may affect ranking accuracy</p></div>
+                    <div class="li-card"><i class="fas fa-wifi"></i><p>Internet connectivity required for full system functionality</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     REFERENCES
+════════════════════════════════════════════════════════ -->
+<section id="references" class="section ref-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="tag">Bibliography</span>
+            <h2>References &amp; <span class="hl">Resources</span></h2>
+        </div>
+        <div class="ref-grid" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://swachhbharatmission.gov.in" target="_blank" rel="noopener" class="ref-card">
+                <div class="ref-icon"><i class="fas fa-flag"></i></div>
+                <div><h4>Swachh Bharat Mission</h4><p>Official Government Portal — India's National Cleanliness Mission</p><span>swachhbharatmission.gov.in</span></div>
+                <i class="fas fa-external-link-alt ref-ext"></i>
+            </a>
+            <a href="https://data.gov.in" target="_blank" rel="noopener" class="ref-card">
+                <div class="ref-icon"><i class="fas fa-database"></i></div>
+                <div><h4>Government Open Data Platform</h4><p>India's national open data portal for government datasets</p><span>data.gov.in</span></div>
+                <i class="fas fa-external-link-alt ref-ext"></i>
+            </a>
+            <a href="https://ieeexplore.ieee.org" target="_blank" rel="noopener" class="ref-card">
+                <div class="ref-icon"><i class="fas fa-book-open"></i></div>
+                <div><h4>IEEE Research Papers</h4><p>Smart City Cleanliness Monitoring Research (IEEE Xplore)</p><span>ieeexplore.ieee.org</span></div>
+                <i class="fas fa-external-link-alt ref-ext"></i>
+            </a>
+            <a href="https://www.chartjs.org" target="_blank" rel="noopener" class="ref-card">
+                <div class="ref-icon"><i class="fas fa-chart-bar"></i></div>
+                <div><h4>Chart.js Documentation</h4><p>Data Visualization library documentation and official guides</p><span>chartjs.org</span></div>
+                <i class="fas fa-external-link-alt ref-ext"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <i class="fas fa-leaf"></i>CleanCity<span class="accent">Rank</span>
+                </a>
+                <p>A data‑driven platform for evaluating and ranking city cleanliness — supporting India's Swachh Bharat Mission.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#comparison">Comparison</a></li>
+                    <li><a href="#modules">Modules</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="dashboard.html">Live Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Project Info</h5>
+                <ul>
+                    <li><i class="fas fa-university"></i>Parul University</li>
+                    <li><i class="fas fa-building"></i>PICA — Faculty of IT &amp; CS</li>
+                    <li><i class="fas fa-graduation-cap"></i>BCA / BSCIT / IMCA</li>
+                    <li><i class="fas fa-calendar"></i>Semester VII · 2025‑26</li>
+                    <li><i class="fas fa-user-tie"></i>Guide: Prof. Sonali Gupta</li>
+                    <li><i class="fas fa-award"></i>HOD: Dr. Abhishek Mehta</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025‑2026 CleanCity Rank &nbsp;·&nbsp; Parul University &nbsp;·&nbsp; All Rights Reserved</p>
+            <p>Made with <i class="fas fa-heart" style="color:#e74c3c"></i> by Shyamala, Blesson &amp; Rohit</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
