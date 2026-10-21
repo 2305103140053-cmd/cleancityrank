@@ -696,3 +696,94 @@ button { cursor:pointer; border:none; background:none; font-family:var(--font); 
   .modules-grid    { grid-template-columns:1fr; }
   .guide-card      { flex-direction:column; }
 }
+
+/* Compact homepage layout */
+.home-page .nav-container,
+.home-page .container { max-width:1120px; }
+.home-page .navbar { padding:16px 0; }
+.home-page .navbar.scrolled { padding:10px 0; }
+.home-page .nav-logo { gap:8px; font-size:18px; }
+.home-page .nav-logo img { width:44px; height:44px; }
+.home-page .section { padding:76px 0; }
+.home-page .section-header { margin-bottom:40px; }
+.home-page .about-grid { gap:36px; }
+.home-page .ablock { padding:18px; margin-bottom:12px; }
+.home-page .rank-preview-card { padding:20px; }
+.home-page .mini-params { gap:9px; }
+.home-page .mod-card { padding:24px 18px; }
+.home-page .features-grid,
+.home-page .roles-grid,
+.home-page .team-grid { gap:18px; }
+.home-page .feat-card,
+.home-page .team-card { padding:26px 20px; }
+.home-page .tech-col,
+.home-page .req-card { padding:22px; }
+.home-page .fl-grid { gap:40px; }
+.home-page .ref-card { padding:18px; }
+.home-page .footer { padding-top:48px; }
+.home-page .footer-grid { gap:32px; margin-bottom:32px; }
+
+@media(max-width:960px){
+  .home-page .nav-menu {
+    position:fixed; top:0; right:-100%; height:100vh;
+    width:min(280px,calc(100vw - 24px));
+    background:rgba(10,14,26,.98); backdrop-filter:blur(20px);
+    flex-direction:column; align-items:flex-start;
+    padding:90px 30px 40px; gap:22px;
+    transition:right .4s ease; z-index:1000;
+    border-left:1px solid rgba(255,255,255,.06);
+  }
+  .home-page .nav-menu.open { right:0; }
+  .home-page .hamburger { display:flex; }
+  .home-page .nav-link { font-size:17px; color:rgba(255,255,255,.85); }
+}
+
+@media(max-width:768px){
+  .home-page .container,
+  .home-page .nav-container { padding-right:22px; padding-left:22px; }
+  .home-page .section { padding:56px 0; }
+  .home-page .hero { min-height:90svh; padding:104px 22px 76px; }
+  .home-page .hero h1 { font-size:clamp(2rem,6vw,3rem); }
+  .home-page .hero p { margin-bottom:30px; }
+  .home-page .hero-btns { margin-bottom:38px; }
+  .home-page .hero-stat { padding:12px 18px; }
+  .home-page .hero-stat .count { font-size:2rem; }
+  .home-page .section-header { margin-bottom:32px; }
+  .home-page .about-grid { gap:24px; }
+  .home-page .cmp-col { padding:24px 20px; }
+  .home-page .guide-card { padding:20px; gap:18px; }
+  .home-page .footer-grid { gap:24px; }
+}
+
+@media(max-width:480px){
+  .home-page .container,
+  .home-page .nav-container { padding-right:16px; padding-left:16px; }
+  .home-page .section { padding:44px 0; }
+  .home-page .navbar { padding:12px 0; }
+  .home-page .navbar.scrolled { padding:8px 0; }
+  .home-page .nav-logo { gap:7px; font-size:16px; }
+  .home-page .nav-logo img { width:38px; height:38px; }
+  .home-page .hero { min-height:88svh; padding:88px 16px 68px; }
+  .home-page .hero h1 { font-size:1.9rem; }
+  .home-page .hero-badge { font-size:9px; padding:6px 12px; }
+  .home-page .hero p { font-size:.92rem; margin-bottom:24px; }
+  .home-page .hero-btns { gap:10px; margin-bottom:28px; }
+  .home-page .hero-btns .btn { padding:11px 20px; }
+  .home-page .hero-stat { padding:10px 12px; }
+  .home-page .hero-stat .count { font-size:1.7rem; }
+  .home-page .ablock { gap:12px; padding:16px 14px; }
+  .home-page .ablock-icon { width:40px; height:40px; }
+  .home-page .rank-preview-card { padding:16px; }
+  .home-page .mini-params { gap:7px; }
+  .home-page .mp { padding:10px 5px; }
+  .home-page .cmp-col { padding:20px 16px; }
+  .home-page .feat-card,
+  .home-page .team-card { padding:22px 16px; }
+  .home-page .tech-col,
+  .home-page .req-card { padding:18px; }
+  .home-page .guide-card { padding:18px; }
+  .home-page .ref-card { gap:12px; padding:14px; }
+  .home-page .ref-icon { width:42px; height:42px; font-size:18px; }
+  .home-page .footer-bottom { padding:18px 0; }
+  .home-page .footer-bottom p { font-size:12px; }
+}
